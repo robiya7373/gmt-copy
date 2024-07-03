@@ -3,7 +3,7 @@ import brend2 from "../../public/assets/img2b.png";
 import brend3 from "../../public/assets/img3b.png";
 
 
-export default [
+export const BrendData= [
   {
     id: 1,
     title: "НМИЦ онкологии им. Н.Н. Блохина",

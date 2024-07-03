@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.slick-track{
-display: flex;
-gap: 10px;
+.slider {
+  display: flex !important;
+  gap: 10px;
+}
+
+.slick-track {
+  display: flex;
+  gap: 10px;
+}
+
+.mail {
+  background-image: url("../public/assets/Gmail.png");
+  background-repeat: no-repeat;
 }

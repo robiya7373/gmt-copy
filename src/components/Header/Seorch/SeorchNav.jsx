@@ -1,5 +1,6 @@
 import React from "react";
 import { FaSearch,FaRegUser } from "react-icons/fa";
+import { PiShoppingCartSimpleLight } from "react-icons/pi";
 import { BsCart2 , BsHeart} from "react-icons/bs";
 import Gmt from "../../../../public/assets/gmt.png"
 import { PiAlignBottomLight } from "react-icons/pi";
@@ -43,23 +44,23 @@ const Seorch = () => {
         </div>
         <div className="hidden sm:flex gap-3 lg:gap-6 items-center">
           <span className="flex flex-col gap-1 items-center">
-            <FaRegUser />
+            <FaRegUser className=" w-6 h-5"/>
             <p className="text-[#8a8694] text-[14px] hidden lg:block">Войти</p>
           </span>{" "}
           <span className="flex flex-col gap-1 items-center">
-            <BsHeart  />
+            <BsHeart className=" w-5 h-6" />
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Избранное
             </p>
           </span>{" "}
           <span className="flex flex-col gap-1 items-center">
-            <PiAlignBottomLight />
+            <PiAlignBottomLight className=" w-6 h-6"/>
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Сравнить
             </p>
           </span>{" "}
           <span className="flex flex-col gap-1 items-center">
-            <BsCart2 />
+            <PiShoppingCartSimpleLight className=" w-6 h-6" />
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Корзина
             </p>

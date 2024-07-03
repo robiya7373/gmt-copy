@@ -26,7 +26,7 @@ const Carousel = () => {
             {[img1, img1, img1].map((image, index) => (
               <div
                 key={index}
-                className="w-[100%] h-[100%] md:h-[350px] flex justify-between bg-[#e5e4ed] border rounded-2xl"
+                className="w-[100%] h-[100%] md:h-[350px] flex justify-between bg-[#e5e4ed] slider border rounded-2xl"
               >
                 <div className="p-[30px] flex flex-col justify-center md:w-1/2">
                   <h2 className="text-[#202020] text-[32px] lg:text-[45px] w-[100%] lg:w-[90%] leading-[37px] lg:leading-[52px]">
@@ -56,7 +56,7 @@ const Carousel = () => {
             ))}
           </Slider>
         </div>
-        <div className="flex justify-between absolute right-[60px] bottom-10">
+        <div className="flex justify-between absolute right-[60px] bottom-16">
           <div className="flex gap-3">
             <button
               className="w-[41px] h-[41px] rounded-full border bg-[#fff] flex items-center justify-center"

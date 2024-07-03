@@ -5,16 +5,19 @@ import Vibirayut from "./components/Vibirayut";
 import Tovar from "./components/Tovar";
 import Klent from "./components/Klent";
 import Brend from "./components/Brend";
+import Carousel from "./components/Carousel";
+
 
 const index = () => {
   return (
     <div>
+      <Carousel/>
       <Katagoriy />
       <Kabinet />
-      <Vibirayut/>
-      <Tovar/>
-      <Klent/>
-      <Brend/>
+      <Vibirayut />
+      <Tovar />
+      <Klent />
+      <Brend />
     </div>
   );
 };
