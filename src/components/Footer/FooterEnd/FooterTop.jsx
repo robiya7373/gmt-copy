@@ -12,7 +12,7 @@ const FooterTop = () => {
           </h4>
           <div className="flex justify-between py-5 gap-5">
             <div className="flex flex-col">
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink to={"/okompaniya"} className="text-[14px]  text-[#F8F7F3] mb-[10px]">
                 О компании
               </NavLink>
               <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
@@ -21,7 +21,7 @@ const FooterTop = () => {
               <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
                 Вакансии
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink to={"/garantiya"} className="text-[14px]  text-[#F8F7F3] mb-[10px]">
                 Гарантии
               </NavLink>
               <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
@@ -30,7 +30,7 @@ const FooterTop = () => {
               <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
                 Акции
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3]">
+              <NavLink to={"/dostafka"} className="text-[14px]  text-[#F8F7F3]">
                 Доставка
               </NavLink>
             </div>

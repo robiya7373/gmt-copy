@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -6,21 +7,21 @@ const Navbar = () => {
       <div className=" flex justify-between items-center py-5">
         <div>
           <ul className=" flex gap-6 text-[rgb(122,118,135)] font-manrope text-xs font-medium leading-4 tracking-normal text-left">
-            <li>
-              <a href="#">О компании</a>
-            </li>
-            <li>
-              <a href="#">Доставка</a>
-            </li>
-            <li>
-              <a href="#">Оплата</a>
-            </li>
-            <li>
-              <a href="#">Гарантии</a>
-            </li>
-            <li>
-              <a href="#">Блог</a>
-            </li>
+            <NavLink  to={"/okompaniya"}>
+              О компании
+            </NavLink>
+            <NavLink to={"/dostafka"}>
+              Доставка
+            </NavLink>
+            <NavLink to={"/oplata"}>
+             Оплата
+            </NavLink>
+            <NavLink to={"/garantiya"}>
+              Гарантии
+            </NavLink>
+            <NavLink to={"/blog"}>
+              Блог
+            </NavLink>
           </ul>
         </div>
         <div>

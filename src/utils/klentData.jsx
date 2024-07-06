@@ -58,3 +58,4 @@ export const kompaniya = [
     image: kom4,
   },
 ];
+

@@ -12,7 +12,7 @@ const categories = [
     span: 1,
   },
   {
-    imgSrc: img1,
+    imgSrc: img7,
     title: "Обрудование для анестезиологии",
     span: 2,
   },
@@ -37,7 +37,7 @@ const categories = [
     span: 1,
   },
   {
-    imgSrc: img7,
+    imgSrc: img1,
     title: "Дерматологическое оборудование",
     span: 1,
   },

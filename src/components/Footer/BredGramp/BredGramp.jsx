@@ -35,13 +35,17 @@ const AccordionSummary = styled((props) => (
     width: '30px',
     height: '30px',
     borderRadius: '50%',
-    border: '1px solid #fff',
-    backgroundColor: expanded ? '#fff' : 'transparent',
-    color: expanded ? '#000' : '#fff',
-    transition: 'background-color 0.3s, color 0.3s',
+    backgroundColor: expanded ? '#088269' : '#088269',
+    color: expanded ? '#fff' : '#fff',
+    transition: 'transform 200ms',
+    border: '1px solid #D5D1E1',
+   
   },
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(45deg)',
+    // text-white bg-[#088269]
+    backgroundColor:"#fff",
+    color:"#088269",
   },
 }));
 
@@ -58,14 +62,15 @@ export default function BredGramp() {
   };
 
   return (
-    <div className="bg-[#088269] py-[60px] lg:py-[120px] ">
-      <div className="max-w-[1440px] mx-auto p-5 relative grid grid-cols-1 md:grid-cols-2">
+    <div className="bg-[#088269] py-[60px] lg:py-[120px] mb-[60px] md:mb-[120px] lg:mb-[150px]">
+      <div className="max-w-[1440px] mx-auto px-5 grid grid-cols-1 md:grid-cols-2">
         <div className="text-white">
           <p className="text-[18px] md:text-[20px] lg:text-[30px] font-medium leading-[120%] text-white mb-[50px]">
             Информация о компании
           </p>
         </div>
-        <div className="border-b">
+        <div className="md:border-t">
+          <div className="border-t border-white mb-4 md:hidden"></div>
           <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
             <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
               <Typography>
@@ -74,7 +79,7 @@ export default function BredGramp() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <p className="text-[16px]">
+                <p className="text-[16px] bg-[#088269] p-4">
                   Но синтетическое тестирование, в своём классическом представлении, допускает
                   внедрение поэтапного и последовательного развития общества. В рамках спецификации
                   современных стандартов, сторонники тоталитаризма в науке будут функционально
@@ -94,7 +99,7 @@ export default function BredGramp() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <p className="text-[16px]">
+                <p className="text-[16px] bg-[#088269] p-4">
                   Но синтетическое тестирование, в своём классическом представлении, допускает
                   внедрение поэтапного и последовательного развития общества. В рамках спецификации
                   современных стандартов, сторонники тоталитаризма в науке будут функционально
@@ -114,7 +119,7 @@ export default function BredGramp() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <p className="text-[16px]">
+                <p className="text-[16px] bg-[#088269] p-4">
                   Но синтетическое тестирование, в своём классическом представлении, допускает
                   внедрение поэтапного и последовательного развития общества. В рамках спецификации
                   современных стандартов, сторонники тоталитаризма в науке будут функционально
@@ -134,7 +139,7 @@ export default function BredGramp() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <p className="text-[16px]">
+                <p className="text-[16px] bg-[#088269] p-4">
                   Но синтетическое тестирование, в своём классическом представлении, допускает
                   внедрение поэтапного и последовательного развития общества. В рамках спецификации
                   современных стандартов, сторонники тоталитаризма в науке будут функционально

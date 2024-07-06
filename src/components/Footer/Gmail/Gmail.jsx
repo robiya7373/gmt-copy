@@ -4,7 +4,7 @@ import React from "react";
 const Gmail = () => {
   return (
     <div className="bg-[#e5e4ed] mt-40 ">
-      <div className="max-w-[1440px] mx-auto px-5 grid mail justify-center sm:justify-end ">
+      <div className="max-w-[1440px] mx-auto px-5 grid gmail justify-center sm:justify-end ">
         <div className="pt-[35px]">
           <p className="text-[18px] md:text-[20px] lg:text-[30px] font-medium leading-[120%] text-[#202020] ">
             Подпишитесь и будьте в курсе!

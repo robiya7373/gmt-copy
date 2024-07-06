@@ -3,7 +3,6 @@ import BredGramp from "./BredGramp/BredGramp";
 import Kompaniya from "./Kompaniya/Kompaniya";
 import Maps from "./Maps/Maps";
 import Gmail from "./Gmail/Gmail";
-import FooterEnd from "./FooterEnd/Footerr";
 
 const index = () => {
   return (
@@ -11,8 +10,7 @@ const index = () => {
       <BredGramp />
       <Kompaniya />
       <Maps />
-      <Gmail/>
-      <FooterEnd/>
+      <Gmail />
     </div>
   );
 };

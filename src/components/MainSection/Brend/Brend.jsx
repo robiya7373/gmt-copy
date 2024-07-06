@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import { BiArrowToLeft, BiArrowToRight } from "react-icons/bi";
+// import { BiArrowToLeft, BiArrowToRight } from "react-icons/bi";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BrendData } from "../../../utils/brendData";
@@ -10,7 +10,7 @@ const Brend = () => {
   const sliderRef = useRef(null);
 
   const settings = {
-    dots: false ,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 3,
@@ -49,8 +49,6 @@ const Brend = () => {
     ],
   };
 
-
-
   return (
     <div className="bg-[#f8f7f3] py-[80px] pb-[150px]">
       <div className="max-w-[1440px] mx-auto px-5 flex flex-col md:flex-row w-full gap-[30px]">
@@ -69,8 +67,11 @@ const Brend = () => {
           <div>
             <Slider ref={sliderRef} {...settings}>
               {BrendData.map((slide, index) => (
-                <div key={index} className="w-[320px] border bg-[#f8f7f3]">
-                  <div className="w-full h-[220px] bg-[#fff] flex items-center justify-center">
+                <div
+                  key={index}
+                  className="w-[320px] border bg-[#f8f7f3] rounded-lg"
+                >
+                  <div className="w-full h-[220px] bg-[#fff] flex items-center justify-center rounded-t-lg">
                     <img src={slide.image} alt={slide.title} />
                   </div>
                   <h2 className="text-[#202020] text-[12px] sm:text-[15px] p-4 border-t w-full sm:w-[80%]">
@@ -86,8 +87,8 @@ const Brend = () => {
                 className="w-[41px] h-[41px] rounded-full border flex items-center justify-center"
                 onClick={() => sliderRef.current.slickPrev()}
               >
-              <HiArrowSmLeft />
-              </button> 
+                <HiArrowSmLeft />
+              </button>
               <button
                 className="w-[41px] h-[41px] rounded-full border flex items-center justify-center"
                 onClick={() => sliderRef.current.slickNext()}
