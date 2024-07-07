@@ -10,7 +10,6 @@ import { Dost, accordionItems } from "../../utils/dostafkaData";
 import Gmail from "../../components/Footer/Gmail/Gmail";
 import BredGramp from "../../components/Footer/BredGramp/BredGramp";
 
-
 const Dostafka = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -89,15 +88,18 @@ const Dostafka = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-[10px] md:grid-cols-4">
-    {Dost.map((item, index) => (
-      <div key={index} className="border border-[#D5D1E1] rounded-[10px] gap-4 md:gap-[25px] lg:gap-[41px] flex flex-col justify-center items-center h-[168px] sm:h-[175px] lg:h-[300px]">
-       <img src={item.img} alt="" />
-        <p className="text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[140%] font-medium leading-[118%]">
-          {item.text}
-        </p>
-      </div>
-    ))}
-  </div>
+          {Dost.map((item, index) => (
+            <div
+              key={index}
+              className="border border-[#D5D1E1] rounded-[10px] gap-4 md:gap-[25px] lg:gap-[41px] flex flex-col justify-center items-center h-[168px] sm:h-[175px] lg:h-[300px]"
+            >
+              <img src={item.img} alt="" />
+              <p className="text-[12px] md:text-[14px] lg:text-[16px] lg:leading-[140%] font-medium leading-[118%]">
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
 
         <div className="mt-[30px] lg:mt-[40px] flex justify-center lg:justify-end ">
           <button className="text-[12px] bg-[#088269] text-white py-2 lg:py-[11px] px-[20px] lg:px-[30px] rounded-full font-semibold lg:text-[14px] hover:bg-[#07745E] duration-200  ">

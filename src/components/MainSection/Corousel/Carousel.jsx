@@ -18,7 +18,7 @@ const Carousel = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    dotsClass: "slick-dots custom-dots" // Use custom class
+    dotsClass: "slick-dots custom-dots"
   };
 
   return (

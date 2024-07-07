@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
 .slider {
   display: flex !important;
   gap: 10px;
@@ -51,7 +58,7 @@
 }
 
 .slick-dots li {
-  margin: 0 10px; /* Adjust this value to change spacing between dots */
+  margin: 0 10px; 
 }
 
 .slick-dots li button:before {

@@ -2,16 +2,17 @@ import React from "react";
 import { RiMenu2Fill } from "react-icons/ri";
 import { CiLocationOn } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
 const Katalog = () => {
   return (
     <div className="max-w-[1440px] mx-auto p-5 relative" >
       <div className=" flex justify-between">
         <ul className="text-[--second] flex items-center gap-[15px] lg:gap-[25px] ">
-          <li className="flex items-center gap-1 text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer ">
+          <NavLink to={"/Katalog"} className="flex items-center gap-1 text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer ">
             <RiMenu2Fill />
             <span>Каталог</span>
-          </li>
+          </NavLink>
 
           <li className="text-[12px] lg:text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer ">
             Производители
@@ -30,9 +31,9 @@ const Katalog = () => {
           <li className="text-[12px] lg:text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer ">
             Покупателям
           </li>
-          <li className="text-[12px] lg:text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer ">
+          <NavLink to={"/kontakt"} className="text-[12px] lg:text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer ">
             Контакты
-          </li>
+          </NavLink>
         </ul>
 
         <div className="flex gap-[17px] items-center ">
