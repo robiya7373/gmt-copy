@@ -224,7 +224,7 @@ import {
   CardContent,
   Typography,
 } from '@mui/material';
-import tovar from '../../utils/tovarData'; // Import your product data
+import tovar from '../../utils/tovarData';
 
 const ProductFilter = () => {
   const [priceRange, setPriceRange] = useState([20000, 950000]);

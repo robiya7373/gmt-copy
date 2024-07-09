@@ -14,7 +14,6 @@ const Katagoriy = () => {
           </button>
         </div>
       </div>
-
       <div className="flex flex-wrap gap-[10px] mb-[25px]">
         {categories.map((category, index) => (
           <div

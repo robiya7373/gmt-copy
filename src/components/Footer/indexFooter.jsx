@@ -9,7 +9,10 @@ const index = () => {
     <div>
       <BredGramp />
       <Kompaniya />
-      <Maps />
+      <div className="max-w-[1440px] mx-auto px-5">
+        {" "}
+        <Maps />
+      </div>
       <Gmail />
     </div>
   );

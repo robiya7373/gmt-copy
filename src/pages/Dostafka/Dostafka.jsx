@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-// import subtract from "../../public/Subtract.svg";
-// import dasIcon1 from "../../public/dasIcon1.svg";
-// import dasIcon2 from "../../public/dasIcon2.svg";
-// import star from "../../public/star.svg";
 import DostafkaGramp from "../Dostafka/DostafkaGramp";
 import { Link } from "react-router-dom";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -48,7 +44,6 @@ const Dostafka = () => {
           </span>
         </Link>
       </div>
-
       <div className=" max-w-[1440px] mx-auto px-5 custom-margin mt-[40px] md:mt-[50px] lg:mt-[100px] ">
         <p className="text-[28px] md:text-[34px] lg:text-[48px] font-medium leading-[110%] text-[#202020] mb-[30px] lg:mb-[40px] ">
           Информация о доставке
@@ -59,7 +54,6 @@ const Dostafka = () => {
             width={"100%"}
             height="450"
           ></iframe>
-
           <span className=" absolute bottom-5 right-5 ">
             <button className="text-[12px] bg-[#088269] text-white py-2 lg:py-[11px] px-[20px] lg:px-[30px] rounded-full font-semibold lg:text-[14px] hover:bg-[#07745E] duration-200  ">
               Пункт выдачи
@@ -79,14 +73,12 @@ const Dostafka = () => {
           </p>
         </div>
       </div>
-
       <div className="max-w-[1440px] mx-auto px-5 custom-margin ">
         <div className="my-[35px] md:mb-[30px] lg:mb-[40px] ">
           <p className="text-[18px] md:text-[20px] lg:text-[30px] font-medium leading-[120%] text-[#202020] ">
             С нами выгодно и удобно
           </p>
         </div>
-
         <div className="grid grid-cols-2 gap-[10px] md:grid-cols-4">
           {Dost.map((item, index) => (
             <div
@@ -107,7 +99,6 @@ const Dostafka = () => {
           </button>
         </div>
       </div>
-
       <div className=" max-w-[1440px] mx-auto px-5 my-[160px] custom-margin grid grid-cols-1 lg:grid-cols-2 ">
         <div>
           <span className=" block w-[70%] md:w-[100%] lg:w-[70%] xl:w-[60%] ">
@@ -115,14 +106,12 @@ const Dostafka = () => {
               Правила получения товара в пункте выдачи
             </p>
           </span>
-
           <p className="text-[12px] md:text-[14px] lg:text-[16px] font-medium leading-[120%] lg:leading-[140%] w-[90%] lg:w-[80%] pt-[10px] md:pt-[20px] lg:pt-[25px] pb-[30px] opacity-50  ">
             Учитывая стремительное развитие мировых медицинских технологий,
             врачи в Российской Федерации и соседних странах столкнулись
             с вызовом, требующим обновления приборов.
           </p>
         </div>
-
         <div className="flex flex-col gap-[20px] ">
           <div className="flex flex-col gap-[15px] md:gap-[10px] lg:gap-[15px]  border-t border-[#D5D1E1] pb-[10px] lg:pb-[20px] ">
             <p className="pt-[15px] md:pt-[25px] cursor-text font-semibold ">
@@ -153,9 +142,7 @@ const Dostafka = () => {
           </div>
         </div>
       </div>
-
       <BredGramp />
-
       <div className=" max-w-[1440px] mx-auto px-5 grid grid-cols-2 custom-margin">
         <div className=" order-1">
           <p className="text-[#202020] font-medium leading-[120%] text-[18px] md:text-[20px] xl:text-[30px] pb-[25px] md:pb-[30px] lg:pb-0  ">
@@ -196,7 +183,6 @@ const Dostafka = () => {
             width={"100%"}
             height="450"
           ></iframe>
-
           <span className=" absolute bottom-5 right-5 ">
             <button className="text-[12px] bg-[#088269] text-white py-2 lg:py-[11px] px-[20px] lg:px-[30px] rounded-full font-semibold lg:text-[14px] hover:bg-[#07745E] duration-200  ">
               Построить маршрут
@@ -204,9 +190,7 @@ const Dostafka = () => {
           </span>
         </div>
       </div>
-
       <DostafkaGramp title={accordionItems} />
-
       <div className="max-w-[1440px] mx-auto px-5 mt-[160px] grid grid-cols-1 gap-[30px] lg:gap-0 lg:grid-cols-2 custom-margin ">
         <div>
           <p className="text-[18px] md:text-[20px] lg:text-[30px] font-medium leading-[120%] text-[#202020] ">
@@ -266,7 +250,6 @@ const Dostafka = () => {
               className="w-full h-[100px] resize-none p-[11px] text-[14px] outline-none border-b border-[#D5D1E1] "
             />
           </div>
-
           <div className="flex flex-col  md:gap-[40px] items-center md:flex-row mt-[30px] lg:gap-[30px]  lg:items-center ">
             <button className="text-[12px] bg-[#088269] text-white py-2 lg:py-[11px] px-[20px] lg:px-[30px] rounded-full font-semibold lg:text-[14px] hover:bg-[#07745E] duration-200  ">
               Отправить
@@ -282,7 +265,6 @@ const Dostafka = () => {
           </div>
         </form>
       </div>
-
       <Gmail />
     </>
   );

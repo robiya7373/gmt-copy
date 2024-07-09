@@ -32,7 +32,6 @@ const KontaktTop = () => {
     <div className="flex justify-between mb-8">
     <div className="p-6 w-[49%]  bg-white rounded-xl shadow-md space-y-4">
       <h2 className="text-xl font-bold">ООО Глобал Медикал Трейд</h2>
-
       <div>
         <p className="font-semibold flex  text-[#7A7687] ">
           {" "}
@@ -41,7 +40,6 @@ const KontaktTop = () => {
         </p>
         <p>Россия, г. Москва, ул. Докукина, 8, стр. 2</p>
       </div>
-
       <div>
         <p className="font-semibold flex text-[#7A7687] ">
           <IoLocationOutline className="mr-2" />

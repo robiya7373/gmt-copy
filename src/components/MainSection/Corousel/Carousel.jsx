@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
 import img1 from "../../../../public/assets/Banner.png";
 import "../../../index.css";
-// import "./carousel.css"; // Import the custom CSS file
 
 const Carousel = () => {
   const sliderRef = useRef(null);
@@ -22,7 +21,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto px-5 relative">
+    <div className="max-w-[1440px] mx-auto px-5 relative mr-14">
       <div className="bg-[#f8f7f3] py-[20px] slick-track">
         <div className="h-full md:h-[368px] w-full flex flex-col gap-[40px]">
           <div>

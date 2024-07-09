@@ -63,7 +63,6 @@ const Garantiya = () => {
               С нами выгодно и удобно
             </p>
           </div>
-
           <div className="grid grid-cols-2 gap-[10px] md:grid-cols-4">
             {Garantiy.map((item, index) => (
               <div
@@ -77,7 +76,6 @@ const Garantiya = () => {
               </div>
             ))}
           </div>
-
           <div className="mt-[30px] mb-[30px] lg:mt-[40px] flex justify-center lg:justify-end gap-5 ">
             <button className="text-[12px] border border-[#088269] bg-transparent text-[#088269] py-2 lg:py-[11px] px-[20px] lg:px-[30px] rounded-full font-semibold lg:text-[14px] hover:bg-[#07745E] hover:text-white duration-200  ">
               Гарантийный случай{" "}

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import Pagination from "@mui/material/Pagination";
-// import { styles } from '@mui/material/styles';
 import { styled } from "@mui/material/styles";
 import img1 from "../../../public/assets/img1com.png";
 import img2 from "../../../public/assets/img2com.png";
-
 import CategoryList from "../../components/Detals/CategoryList";
 import { NavLink } from "react-router-dom";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -17,17 +15,6 @@ const useStyles = styled({
     padding: "20px",
   },
   article: {
-    // width: "80%",
-    // margin: "10px 0",
-    // padding: "10px",
-    // border: "1px solid #ccc",
-    // borderRadius: "8px",
-    // display: "grid",
-    // flexDirection: "row",
-    // alignItems: "center",
-    // display: "grid",
-    // gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-
     "@media (max-width: 600px)": {
       flexDirection: "column",
     },
@@ -35,23 +22,19 @@ const useStyles = styled({
   image: {
     width: "150px",
     height: "100px",
-    // objectFit: "cover",
-    // marginRight: "20px",
+
     "@media (max-width: 600px)": {
       width: "100%",
       height: "auto",
       marginBottom: "10px",
     },
   },
-  // content: {
-  //   flex: 1,
-  // },
+
   pagination: {
     marginTop: "90px",
   },
 });
 
-// Hardcoded data with more articles
 const allArticles = Array.from({ length: 50 }, (_, i) => ({
   id: i + 1,
   title: `Что такое инфузомат (инфузионный насос)  `,
@@ -98,7 +81,6 @@ const Articles = () => {
         </div>
         <div className={classes.root}>
           {paginatedArticles.map((article) => (
-            //    <div className=" grid grid-cols-2">
             <div
               key={article.id}
               value={classes.article}
@@ -127,7 +109,6 @@ const Articles = () => {
                 </button>
               </div>
             </div>
-            //    </div>
           ))}
           <Pagination
             count={totalPages}

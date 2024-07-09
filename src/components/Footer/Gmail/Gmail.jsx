@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Gmail = () => {
   return (
     <div className="bg-[#e5e4ed] mt-40 ">

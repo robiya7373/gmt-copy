@@ -24,7 +24,7 @@ const Map = () => {
     });
   };
   return (
-    <div className=" max-w-[1440px] mx-auto px-5 py-5 gap-[20px] grid gird-cols-1 md:grid-cols-2 ">
+    <div className=" max-w-[1440px] mx-auto px-5 mb-36 py-5 gap-[20px] grid gird-cols-1 md:grid-cols-2 ">
       <div className="w-full border-[#D5D1E1]  border rounded-[10px] ">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.072884043826!2d69.20123767599627!3d41.2855182023078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ba578f4f58d%3A0xd7a2ecf23413b7a0!2sNajot%20Ta&#39;lim%20Chilonzor%20Filial!5e0!3m2!1suz!2s!4v1719411223784!5m2!1suz!2s"
@@ -33,9 +33,11 @@ const Map = () => {
           className=" rounded-[10px] "
         ></iframe>
       </div>
-
       <div className=" bg-white p-[40px] border-[#D5D1E1]  border rounded-[10px] ">
-        <h2 className=" lg:text-[30px] mb-4 text-[18px] md:text-[20px] font-medium leading-[120%] text-[#202020]"> Остались вопросы?</h2>
+        <h2 className=" lg:text-[30px] mb-4 text-[18px] md:text-[20px] font-medium leading-[120%] text-[#202020]">
+          {" "}
+          Остались вопросы?
+        </h2>
         <p className="mb-6 text-[14px] text-[#7A7687] xl:pr-[150px] ">
           Задайте их по номеру телефона +7 (495) 000-00-00 или оставьте свои
           координаты и наш менеджер перезвонит вам через 10 минут

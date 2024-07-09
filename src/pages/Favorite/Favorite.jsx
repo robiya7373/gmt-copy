@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { HiChevronDown, HiBars3, HiOutlineSquares2X2 } from "react-icons/hi2";
 import { BsHeart } from "react-icons/bs";
 import { BiObjectsVerticalBottom } from "react-icons/bi";
-
 import tovar from "../../utils/tovarData";
 
 const Favorite = () => {
@@ -32,7 +31,6 @@ const Favorite = () => {
             </div>
           </div>
         </div>
-
         <div className="max-w-[1000px] mx-auto mr-[10px] mt-3">
           <div className="grid grid-cols-3 gap-10">
             {displayedTovar.map((tovar, index) => (
@@ -74,7 +72,6 @@ const Favorite = () => {
             ))}
           </div>
         </div>
-
         <div className="flex justify-end items-center mt-[40px]">
           <button className="px-6 py-[11px] rounded-full font-semibold text-[16px] text-white bg-[#088269] border-none">
             Все товары

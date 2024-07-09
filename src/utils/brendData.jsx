@@ -2,8 +2,7 @@ import brend1 from "../../public/assets/img1b.png";
 import brend2 from "../../public/assets/img2b.png";
 import brend3 from "../../public/assets/img3b.png";
 
-
-export const BrendData= [
+export const BrendData = [
   {
     id: 1,
     title: "НМИЦ онкологии им. Н.Н. Блохина",
@@ -53,5 +52,30 @@ export const BrendData= [
     id: 10,
     title: "НМИЦ онкологии им. Н.Н. Блохина",
     image: brend1,
+  },
+];
+
+import src1 from "../../public/assets/certifikat.png";
+
+export const Certifikat = [
+  {
+    id: 1,
+    image: src1,
+  },
+  {
+    id: 2,
+    image: src1,
+  },
+  {
+    id: 3,
+    image: src1,
+  },
+  {
+    id: 4,
+    image: src1,
+  },
+  {
+    id: 5,
+    image: src1,
   },
 ];

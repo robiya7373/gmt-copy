@@ -39,11 +39,9 @@ const AccordionSummary = styled((props) => (
     color: expanded ? '#fff' : '#fff',
     transition: 'transform 200ms',
     border: '1px solid #D5D1E1',
-   
-  },
+     },
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(45deg)',
-    // text-white bg-[#088269]
     backgroundColor:"#fff",
     color:"#088269",
   },
@@ -70,7 +68,6 @@ export default function BredGramp() {
           </p>
         </div>
         <div className="md:border-t">
-          <div className="border-t border-white mb-4 md:hidden"></div>
           <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
             <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
               <Typography>

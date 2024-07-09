@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import "../../index.css";
 
-
 const Accordion = ({ title, show = true }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -27,7 +26,7 @@ const Accordion = ({ title, show = true }) => {
       >
         <div className={`${show ? "block" : "hidden"}`}>
           <div className="w-[80%]">
-               <p className="text-[18px] md:text-[20px] lg:text-[30px] font-medium leading-[120%] text-[#202020] ">
+            <p className="text-[18px] md:text-[20px] lg:text-[30px] font-medium leading-[120%] text-[#202020] ">
               Документы, необходимые для получения груза
             </p>
             <p className="text-[#202020] pt-[10px] md:pt-[20px] lg:pt-[25px]">
@@ -40,24 +39,23 @@ const Accordion = ({ title, show = true }) => {
         <div className={` ${show ? "border-t border-[#D5D1E1]" : ""} `}>
           {accordionItems.map((item, index) => (
             <div key={index} className={`border-b border-[#D5D1E1] `}>
-            <div
-  className="flex justify-between items-center cursor-pointer py-[15px] lg:py-[25px]"
-  onClick={() => toggleAccordion(index)}
->
-  <span className="font-semibold text-[14px] md:text-[16px] lg:text-[18px]">
-    {item.title}
-  </span>
-  <span
-    className={`${
-      activeIndex === index
-        ? "rotate-45 text-white bg-[#088269]"
-        : "rotate-0"
-    } duration-200 border-[#D5D1E1] border w-[32px] h-[32px] rounded-full flex justify-center items-center text-[28px] pb-[5px]`}
-  >
-    +
-  </span>
-</div>
-
+              <div
+                className="flex justify-between items-center cursor-pointer py-[15px] lg:py-[25px]"
+                onClick={() => toggleAccordion(index)}
+              >
+                <span className="font-semibold text-[14px] md:text-[16px] lg:text-[18px]">
+                  {item.title}
+                </span>
+                <span
+                  className={`${
+                    activeIndex === index
+                      ? "rotate-45 text-white bg-[#088269]"
+                      : "rotate-0"
+                  } duration-200 border-[#D5D1E1] border w-[32px] h-[32px] rounded-full flex justify-center items-center text-[28px] pb-[5px]`}
+                >
+                  +
+                </span>
+              </div>
               <CSSTransition
                 in={activeIndex === index}
                 timeout={200}

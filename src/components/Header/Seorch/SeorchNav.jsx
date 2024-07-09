@@ -1,7 +1,7 @@
 import React from "react";
 import { FaSearch, FaRegUser } from "react-icons/fa";
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
-import { BsCart2, BsHeart } from "react-icons/bs";
+import { BsHeart } from "react-icons/bs";
 import Gmt from "../../../../public/assets/gmt.png";
 import { PiAlignBottomLight } from "react-icons/pi";
 import { NavLink } from "react-router-dom";
@@ -16,7 +16,7 @@ const Seorch = () => {
           <div className="w-full lg:w-[500px] overflow-hidden h-[43px] md:h-[47px] justify-between bg-[#d5d1e1] rounded-full  flex  items-center border ">
             <div className="flex-1 flex  bg-white rounded-full">
               <select
-                className=" px-3 lg:px-6 py-3.5 rounded-full text-[12px] md:text-[16px]"
+                className=" px-3 lg:px-6 py-3.5 rounded-full outline-none bg-[#d5d1e1] text-[12px] md:text-[16px]"
                 name=""
                 id=""
               >
@@ -59,21 +59,18 @@ const Seorch = () => {
               Избранное
             </p>
           </NavLink>{" "}
-          <NavLink
-            to={"/"}
-            className="flex flex-col gap-1 items-center"
-          >
+          <NavLink to={"/"} className="flex flex-col gap-1 items-center">
             <PiAlignBottomLight className=" w-6 h-6" />
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Сравнить
             </p>
           </NavLink>{" "}
-          <span className="flex flex-col gap-1 items-center">
+          <NavLink to={"/korzinka"} className="flex flex-col gap-1 items-center">
             <PiShoppingCartSimpleLight className=" w-6 h-6" />
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Корзина
             </p>
-          </span>
+          </NavLink>
         </div>
       </div>
     </div>

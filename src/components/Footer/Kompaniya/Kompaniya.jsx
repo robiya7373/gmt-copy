@@ -1,7 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { kompaniya } from "../../../utils/klentData";
 import Slider from "react-slick";
-// import { BrendData } from "../../../utils/brendData";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
 
 const Kompaniya = () => {

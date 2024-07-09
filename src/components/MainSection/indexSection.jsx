@@ -7,17 +7,20 @@ import Klent from "./Klent/Klent";
 import Brend from "./Brend/Brend";
 import Carousel from "./Corousel/Carousel";
 
-
 const index = () => {
   return (
     <div>
-      <Carousel/>
+      <Carousel />
       <Katagoriy />
       <Kabinet />
-      <Vibirayut />
+      <div className="max-w-[1440px] mx-auto p-5 relative">
+        <Vibirayut />
+      </div>
       <Tovar />
       <Klent />
-      <Brend />
+      <div className="max-w-[1440px] mx-auto px-5">
+        <Brend />
+      </div>
     </div>
   );
 };

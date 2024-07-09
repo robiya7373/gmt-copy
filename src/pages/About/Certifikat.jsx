@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BrendData } from "../../../utils/brendData";
+import { Certifikat } from "../../utils/brendData";
 import { HiArrowSmLeft, HiArrowSmRight } from "react-icons/hi";
 
 const Brend = () => {
@@ -12,7 +12,7 @@ const Brend = () => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     infinite: true,
@@ -52,30 +52,22 @@ const Brend = () => {
     <div className="bg-[#f8f7f3] py-[80px] pb-[150px]">
       <div className=" flex flex-col md:flex-row w-full gap-[30px]">
         <div className=" md:w-1/3 w-full">
-          <div className="flex justify-between">
-            <h1 className="text-[30px] font-medium">Бренды</h1>
-            <button className="px-5 py-3 hidden sm:block md:hidden  rounded-full border text-[14px] text-[#fff] bg-[#088269]">
-              Сертификаты
-            </button>
-          </div>
-          <p className="text-[#202020] text-[16px] pt-[10px]">
-            Эксклюзивные поставщики
-          </p>
+          <h1 className="text-[30px] font-medium">
+            Сертификаты <br /> на продукцию
+          </h1>
         </div>
-        <div className="h-[350px] md:w-2/3 w-full flex flex-col gap-[40px]">
+        <div className="h-[auto] md:w-2/3 w-full flex flex-col gap-[40px]">
           <div>
             <Slider ref={sliderRef} {...settings}>
-              {BrendData.map((slide, index) => (
-                <div
-                  key={index}
-                  className="w-[320px] border bg-[#f8f7f3] rounded-lg"
-                >
-                  <div className="w-full h-[220px] bg-[#fff] flex items-center justify-center rounded-t-lg">
-                    <img src={slide.image} alt={slide.title} />
+              {Certifikat.map((slide, index) => (
+                <div key={index} className="">
+                  <div className="  ">
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="border border-[#E5E2EE] p-3 rounded-lg bg-white"
+                    />
                   </div>
-                  <h2 className="text-[#202020] text-[12px] sm:text-[15px] p-4 border-t w-full sm:w-[80%]">
-                    {slide.title}
-                  </h2>
                 </div>
               ))}
             </Slider>
@@ -95,9 +87,6 @@ const Brend = () => {
                 <HiArrowSmRight />
               </button>
             </div>
-            <button className="px-5 py-3  rounded-full border text-[14px] text-[#fff] bg-[#088269]">
-              Сертификаты
-            </button>
           </div>
         </div>
       </div>
