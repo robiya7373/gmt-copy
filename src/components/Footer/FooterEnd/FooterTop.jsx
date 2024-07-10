@@ -41,7 +41,7 @@ const FooterTop = () => {
               <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
                 Возврат
               </NavLink>
-              <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">
+              <NavLink to={"/faq"} className="text-[14px]  text-[#F8F7F3] mb-[10px]">
                 FAQ
               </NavLink>
               <NavLink className="text-[14px]  text-[#F8F7F3] mb-[10px]">

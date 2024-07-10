@@ -4,6 +4,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import { IoCloseOutline } from "react-icons/io5";
+import img6o from "../../../../public/assets/img6o.png";
 
 const Katalog = () => {
   const [showModal, setShowModal] = useState(false);
@@ -32,12 +33,12 @@ const Katalog = () => {
           >
             Производители
           </NavLink>
-          <li className="text-[12px] lg:text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer ">
+          <NavLink to={"/podkluche"} className="text-[12px] lg:text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer ">
             Кабинеты под ключ
-          </li>
-          <li className="text-[12px] lg:text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer ">
+          </NavLink>
+          <NavLink to={"/uslugi"} className="text-[12px] lg:text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer ">
             Услуги
-          </li>
+          </NavLink>
           <NavLink
             to={"/aksiya"}
             className="text-[12px] lg:text-[14px] font-semibold leading-[normal] hover:text-[--pri] duration-200 cursor-pointer "
@@ -78,20 +79,66 @@ const Katalog = () => {
                 <div className=" z-[999] fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
                   <div className="bg-white p-4 rounded-lg shadow-lg max-w-md w-full">
                     <div className="flex justify-between">
-                    <h2 className="text-lg font-semibold">Заказать звонок</h2>
+                      <h2 className="text-lg font-semibold">Заказать звонок</h2>
 
                       <button
                         onClick={handleCloseModal}
-                        className= "text-gray-500 hover:text-gray-700"
+                        className="text-gray-500 hover:text-gray-700"
                       >
-                       <IoCloseOutline className=" cursor-pointer w-7 h-7" />
+                        <IoCloseOutline className=" cursor-pointer w-7 h-7" />
                       </button>
                     </div>
                     <div className="mt-4">
-                      {/* <h2 className="text-lg font-semibold">Заказать звонок</h2> */}
-                      <p className="mt-2">
-                        This is a modal window. Click the close button or
-                        outside the modal to close it.
+                      <span className="mt-2 flex gap-4">
+                        <img
+                          className=" rounded-full w-14 h-14"
+                          src={img6o}
+                          alt=""
+                        />
+                        <h1>
+                          <p>Олег Сергеевич</p>
+                          <p className=" opacity-55 text-sm">
+                            Менеджер по продажам
+                          </p>
+                        </h1>
+                      </span>
+                      <div className="my-4">
+                        <label htmlFor="tel" className="block text-gray-700">
+                          Ваш телефон*
+                        </label>
+                        <input
+                          type="tel"
+                          id="tel"
+                          className="w-full px-3 border-b "
+                        />
+                      </div>
+                      <div className="my-4">
+                        <label
+                          htmlFor="text"
+                          className="block text-gray-700 mb-12"
+                        >
+                          Ваше сообщение{" "}
+                        </label>
+                        <input
+                          type="text"
+                          id="text"
+                          className="w-full px-3 border-b "
+                        />
+                      </div>
+
+                      <button
+                        onClick={handleCloseModal}
+                        className="bg-[#088269] text-white p-2 rounded-full"
+                      >
+                        Оставить заявку
+                      </button>
+                      <p className="text-xs mt-4">
+                        Нажимая «Отправить», я соглашаюсь c обработкой
+                        персональных данных на условиях <br />
+                        <span className="text-[#088269]">
+                          {" "}
+                          Политики конфиденциальности.
+                        </span>
                       </p>
                     </div>
                   </div>

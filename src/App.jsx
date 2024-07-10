@@ -15,10 +15,16 @@ import Kontakt from "./pages/Kontakt/Kontakt";
 import Aksiya from "./pages/Aksiya/Aksiya";
 import Korzinka from "./pages/Korzinka/Korzinka";
 import CtranisaTovar from "./pages/CtranisaTovar/CtranisaTovar";
+import Cabinet from "./pages/Cabinet/Cabinet";
+import Prizvoditel from "./pages/Prizvoditel/Prizvoditel";
+import FAQ from "./pages/FAQ/Faq";
+import Ctravleniya from "./pages/Ctravleniya/Ctravleniya";
+import KabinetPodkluche from "./pages/Katalog/KabinetPodkluche";
+import Uslugi from "./pages/Oplata/Uslugi"
 
 const App = () => {
   return (
-    <div className="bg-[#f3f8f4]">
+    <div className="bg-[#f8f7f3]">
       <BrowserRouter>
         <Header />
         <Routes>
@@ -35,8 +41,12 @@ const App = () => {
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/aksiya" element={<Aksiya />} />
           <Route path="/katalog/labaratoriya/:id" element={<CtranisaTovar />} />
-     
-
+          <Route path="/cobinet" element={<Cabinet />} />
+          <Route path="/prizvoditel" element={<Prizvoditel />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/ctravleniya" element={<Ctravleniya />} />
+          <Route path="/podkluche" element={<KabinetPodkluche/>}/>
+          <Route path="/uslugi" element={<Uslugi />} />
         </Routes>
         <Footer />
       </BrowserRouter>

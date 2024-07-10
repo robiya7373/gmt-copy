@@ -1,4 +1,5 @@
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import tovar from "../../utils/tovarData";
 
 const NextPrev = ({setStartIndex}) => {
   const handleNext = () => {

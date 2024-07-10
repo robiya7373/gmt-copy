@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HiChevronDown, HiBars3, HiOutlineSquares2X2 } from "react-icons/hi2";
+// import { HiChevronDown, HiBars3, HiOutlineSquares2X2 } from "react-icons/hi2";
 import {
   BiObjectsVerticalBottom,
   BiSolidObjectsVerticalBottom,
@@ -8,14 +8,17 @@ import tovar from "../../utils/tovarData";
 import { SelectWishList, setToWishList } from "../../redux/WishlistSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { SelectCtravleniya, setToCtravleniya } from "../../redux/Ctravleniya";
 
 const Favorite = () => {
   const dispatch = useDispatch();
+  // const likeList = useSelector((state) => state.like.data);
   const handleWishListToggle = (product) => {
     dispatch(setToWishList(product));
   };
   const [startIndex, setStartIndex] = useState(5);
-  const likeList = useSelector(SelectWishList);
+  const likeList = useSelector(SelectCtravleniya);
+  console.log(likeList, "strav");
   const displayedTovar = tovar.slice(startIndex, startIndex + 6);
   if (displayedTovar.length < 3) {
     displayedTovar.push(...tovar.slice(0, 3 - displayedTovar.length));
@@ -28,22 +31,13 @@ const Favorite = () => {
   return (
     <>
       <div className="max-w-[1440px] mx-auto px-6 my-[60px]">
-        <h1 className="text-4xl mb-3  font-medium">Избранное</h1>
+        <h1 className="text-4xl mb-3  font-medium">Сравнение товаров</h1>
         <div className="flex justify-between">
           <ul>
-            <li>Все товары (3)</li>
+            <li>Анализаторы мочи (3)</li>
             <li className="my-3">Маммографы</li>
             <li>Флюорографы</li>
           </ul>
-          <div className="flex gap-[780px] border border-[#E5E2EE] rounded px-3 h-8">
-            <p className="flex m-[2px]">
-              По популярности <HiChevronDown className="m-[7px]" />
-            </p>
-            <div className="flex mt-[5px]">
-              <HiBars3 className="w-5 h-5" />
-              <HiOutlineSquares2X2 className="text-[#088269] w-5 h-5" />
-            </div>
-          </div>
         </div>
         <div className="max-w-[1000px] mx-auto mr-[10px] mt-3">
           <div className="grid grid-cols-3 gap-10">
@@ -61,9 +55,9 @@ const Favorite = () => {
                   onClick={() => handleWishListToggle(tovar)}
                 >
                   {likeList.some((wishItem) => wishItem.id === tovar.id) ? (
-                    <FaHeart size={20} className="text-[#088269]" />
-                  ) : (
                     <FaRegHeart size={20} className="text-[#088269]" />
+                  ) : (
+                    <FaHeart size={20} className="text-[#088269]" />
                   )}
                 </button>
                 <button
@@ -108,11 +102,6 @@ const Favorite = () => {
               </div>
             ))}
           </div>
-        </div>
-        <div className="flex justify-end items-center mt-[40px]">
-          <button className="px-6 py-[11px] rounded-full font-semibold text-[16px] text-white bg-[#088269] border-none">
-            Все товары
-          </button>
         </div>
       </div>
     </>

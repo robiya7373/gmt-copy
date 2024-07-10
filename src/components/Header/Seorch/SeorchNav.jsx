@@ -1,11 +1,43 @@
-import React from "react";
-import { FaSearch, FaRegUser } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaCaretDown } from "react-icons/fa";
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
 import { BsHeart } from "react-icons/bs";
 import Gmt from "../../../../public/assets/gmt.png";
 import { PiAlignBottomLight } from "react-icons/pi";
 import { NavLink } from "react-router-dom";
+import { RiSearchLine } from "react-icons/ri";
+import Register from "./Register";
+import { useSelector } from "react-redux";
+import { Select } from "@mui/material";
+import { SelectWishList } from "../../../redux/WishlistSlice";
+import { SelectCtravleniya } from "../../../redux/Ctravleniya";
+const categories = [
+  "Реанимация",
+  "Хирургия",
+  "Офтальмология",
+  "Лабораторная диагностика",
+  "Акушерство",
+  "Гинекология",
+  "Гистология",
+  "Косметология",
+  "Оториноларингология",
+  "Рентгенология и томография",
+  "Гинекология",
+  "Стерилизация",
+  "Физиотерапия и реабилитация",
+  "Функциональная диагностика",
+  "Эндоскопия",
+  "Новинки",
+  "Распродажи",
+  "Кабинеты под ключ",
+];
 const Seorch = () => {
+  const [showCategories, setShowCategories] = useState(false);
+  // const SravList = useSelector(SelectCtravleniya);
+  const SravList = useSelector(SelectCtravleniya);
+  // const CardList = useSelector(tempCart);
+  const WishList = useSelector(SelectWishList);
+
   return (
     <div className="max-w-[1440px] w-full mx-auto px-5">
       <div className="py-[20px]  flex justify-between gap-4 ">
@@ -13,27 +45,38 @@ const Seorch = () => {
           <NavLink to={"/"}>
             <img src={Gmt} alt="" />
           </NavLink>
-          <div className="w-full lg:w-[500px] overflow-hidden h-[43px] md:h-[47px] justify-between bg-[#d5d1e1] rounded-full  flex  items-center border ">
-            <div className="flex-1 flex  bg-white rounded-full">
-              <select
-                className=" px-3 lg:px-6 py-3.5 rounded-full outline-none bg-[#d5d1e1] text-[12px] md:text-[16px]"
-                name=""
-                id=""
-              >
-                <option value="" className="text-[12px]">
-                  Все категории
-                </option>
-              </select>
-              <input
-                type="text"
-                className=" w-[70%] md:w-full pl-4 outline-none  text-[14px]  rounded-full"
-                placeholder="Поиск"
-              />
-            </div>
-            <div className="p-4  bg-[#d5d1e1]">
-              <FaSearch size={20} />
-            </div>
-            <div className="p"></div>
+          <div className="relative flex items-center border border-[#D5D1E1] px-2 rounded-full">
+            <button
+              onClick={() => setShowCategories(!showCategories)}
+              className="flex items-center gap-2 text-[14px] text-[#7A7687] rounded-full bg-[#D5D1E1] p-3 relative right-[8px]"
+            >
+              Все категории
+              <FaCaretDown className="text-[#7A7687] text-[14px] font-semibold leading-normal" />
+            </button>
+          <NavLink to={"/Katalog"}>
+          {showCategories && (
+              <div className="absolute top-10 left-0 w-[250px] bg-white shadow-md rounded-lg z-10">
+                <ul className="py-2">
+                  {categories.map((category, index) => (
+                    <li
+                      key={index}
+                      className="px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer"
+                    >
+                      {category}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </NavLink>
+            <input
+              type="search"
+              placeholder="Поиск"
+              className="bg-[#F8F7F3] px-4 w-[400px] outline-none "
+            />
+            <button className=" py-4 px-4 flex items-center text-[15px] text-[#7A7687] rounded-r-full rounded-l-full  bg-[#D5D1E1]  left-2 relative">
+              <RiSearchLine className="text-[#7A7687] items-center" />
+            </button>
           </div>
           <div className="hidden xl:block">
             <p className="text-[#8a8694] text-[14px] font-medium">
@@ -46,10 +89,7 @@ const Seorch = () => {
           </div>
         </div>
         <div className="hidden sm:flex gap-3 lg:gap-6 items-center">
-          <span className="flex flex-col gap-1 items-center">
-            <FaRegUser className=" w-6 h-5" />
-            <p className="text-[#8a8694] text-[14px] hidden lg:block">Войти</p>
-          </span>{" "}
+          <Register />
           <NavLink
             to={"/favorite"}
             className="flex flex-col gap-1 items-center"
@@ -58,18 +98,35 @@ const Seorch = () => {
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Избранное
             </p>
+            {WishList > 0 && (
+              <div className="absolute -top-1 right-2  w-[15px] h-[15px] rounded-full text-[#fff] font-semibold text-[12px] flex justify-center items-center bg-[#088269]">
+                {WishList.length}
+              </div>
+            )}
           </NavLink>{" "}
-          <NavLink to={"/"} className="flex flex-col gap-1 items-center">
+          <NavLink
+            to={"/ctravleniya"}
+            className="flex flex-col gap-1 items-center"
+          >
             <PiAlignBottomLight className=" w-6 h-6" />
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Сравнить
             </p>
+            {SravList > 0 && (
+              <div className="absolute w-[15px] h-[15px] rounded-full text-[#c13131] font-semibold text-[12px] z-50 bg-[#088269]">
+                {SravList.length}
+              </div>
+            )}
           </NavLink>{" "}
-          <NavLink to={"/korzinka"} className="flex flex-col gap-1 items-center">
+          <NavLink
+            to={"/korzinka"}
+            className="flex flex-col gap-1 items-center"
+          >
             <PiShoppingCartSimpleLight className=" w-6 h-6" />
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Корзина
             </p>
+           
           </NavLink>
         </div>
       </div>
