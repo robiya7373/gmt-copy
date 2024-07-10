@@ -5,7 +5,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import Fakt from '../About/Fakt';
 import Map from '../../components/Footer/Maps/Maps';
 
-const Services = () => {
+const Uslugi = () => {
   return (
     <>
       <div className="max-w-[1440px] mx-auto px-5">
@@ -76,4 +76,4 @@ const Services = () => {
   );
 }
 
-export default Services
+export default Uslugi
