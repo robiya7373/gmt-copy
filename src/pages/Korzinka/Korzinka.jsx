@@ -1,11 +1,15 @@
 import React from "react";
-import { BiObjectsVerticalBottom } from "react-icons/bi";
+import {
+  BiObjectsVerticalBottom,
+  BiSolidObjectsVerticalBottom,
+} from "react-icons/bi";
 import { BsHeart } from "react-icons/bs";
 import { IoCloseOutline } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { removeItem, updateQuantity } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const Korzinka = () => {
   const dispatch = useDispatch();
@@ -25,6 +29,15 @@ const Korzinka = () => {
 
   const handleRemoveItem = (itemId) => {
     dispatch(removeItem({ id: itemId }));
+  };
+  const likeList = useSelector(SelectCtravleniya);
+
+  const handleStravListToggle = (product) => {
+    dispatch(setToCtravleniya(product));
+  };
+
+  const handleWishListToggle = (product) => {
+    dispatch(setToWishList(product));
   };
 
   return (
@@ -85,8 +98,29 @@ const Korzinka = () => {
                 </div>
               </div>
               <div className="flex mt-10">
-                <BiObjectsVerticalBottom className="cursor-pointer w-8 h-8" />
-                <BsHeart className="cursor-pointer mt-1 mx-3 w-6 h-7" />
+                <button
+                  className="cursor-pointer w-8 h-8"
+                  onClick={() => handleStravListToggle(tovar)}
+                >
+                  {stravList.some((stravItem) => stravItem.id === tovar.id) ? (
+                    <BiSolidObjectsVerticalBottom
+                      size={20}
+                      className="text-[#088269] "
+                    />
+                  ) : (
+                    <BiObjectsVerticalBottom size={20} className="" />
+                  )}
+                </button>{" "}
+                <button
+                  className="cursor-pointer mt-1 mx-3 w-6 h-7"
+                  onClick={() => handleWishListToggle(tovar)}
+                >
+                  {likeList.some((wishItem) => wishItem.id === tovar.id) ? (
+                    <FaRegHeart size={20} className="text-[#088269]" />
+                  ) : (
+                    <FaHeart size={20} className="text-[#088269]" />
+                  )}
+                </button>
                 <button onClick={() => handleRemoveItem(product.id)}>
                   <IoCloseOutline className="cursor-pointer mb-[190px] w-10 h-10" />
                 </button>

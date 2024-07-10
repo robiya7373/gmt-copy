@@ -80,7 +80,7 @@ const TovarList = ({ startIndex }) => {
             <img
               src={tovar.image}
               alt={tovar.alt}
-              className="w-full h-[200px] object-contain rounded-t-xl bg-white p-10"
+              className="w-full h-[200px] cursor-pointer object-contain rounded-t-xl bg-white p-10"
               onClick={() => navigate(`/katalog/labaratoriya/${tovar.id}`)}
             />
             <div className="p-4">
