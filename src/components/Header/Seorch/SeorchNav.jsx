@@ -97,8 +97,8 @@ const Seorch = () => {
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Избранное
             </p>
-            {WishList > 0 && (
-              <div className="absolute -top-1 right-2  w-[15px] h-[15px] rounded-full text-[#fff] font-semibold text-[12px] flex justify-center items-center bg-[#088269]">
+            {WishList.length > 0 && (
+              <div className=" top-[70px] ml-9 absolute  w-[15px] h-[15px] rounded-full text-[#fff] font-semibold text-[12px] flex justify-center items-center bg-[#088269] ">
                 {WishList.length}
               </div>
             )}
@@ -111,8 +111,8 @@ const Seorch = () => {
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Сравнить
             </p>
-            {SravList > 0 && (
-              <div className="absolute w-[15px] h-[15px] rounded-full text-[#c13131] font-semibold text-[12px] z-50 bg-[#088269]">
+            {SravList.length > 0 && (
+              <div className=" top-[70px] ml-9 absolute  w-[15px] h-[15px] rounded-full text-[#fff] font-semibold text-[12px] flex justify-center items-center bg-[#088269] ">
                 {SravList.length}
               </div>
             )}
