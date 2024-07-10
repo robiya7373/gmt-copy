@@ -32,6 +32,8 @@ const categories = [
 ];
 const Seorch = () => {
   const [showCategories, setShowCategories] = useState(false);
+  const cart = useSelector((state) => state.cart.data);
+
   // const SravList = useSelector(SelectCtravleniya);
   const SravList = useSelector(SelectCtravleniya);
   // const CardList = useSelector(tempCart);
@@ -125,7 +127,11 @@ const Seorch = () => {
             <p className="text-[#8a8694] text-[14px] hidden lg:block">
               Корзина
             </p>
-           
+            {cart.length > 0 && (
+              <div className=" top-[70px] ml-9 absolute  w-[15px] h-[15px] rounded-full text-[#fff] font-semibold text-[12px] flex justify-center items-center bg-[#088269] ">
+                {cart.length}
+              </div>
+            )}
           </NavLink>
         </div>
       </div>
