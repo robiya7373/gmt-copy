@@ -8,7 +8,6 @@ import { NavLink } from "react-router-dom";
 import { RiSearchLine } from "react-icons/ri";
 import Register from "./Register";
 import { useSelector } from "react-redux";
-import { Select } from "@mui/material";
 import { SelectWishList } from "../../../redux/WishlistSlice";
 import { SelectCtravleniya } from "../../../redux/Ctravleniya";
 const categories = [

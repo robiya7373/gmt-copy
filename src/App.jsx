@@ -20,14 +20,19 @@ import Prizvoditel from "./pages/Prizvoditel/Prizvoditel";
 import FAQ from "./pages/FAQ/Faq";
 import Ctravleniya from "./pages/Ctravleniya/Ctravleniya";
 import KabinetPodkluche from "./pages/Katalog/KabinetPodkluche";
-import Uslugi from "./pages/Oplata/Uslugi"
+import Uslugi from "./pages/Oplata/Uslugi";
+import Scroll from "./home/Scroll";
 
 const App = () => {
   return (
     <div className="bg-[#f8f7f3]">
       <BrowserRouter>
-        <Header />
-        <Routes>
+        <div className=" fixed w-full bg-[#f8f7f3] z-[999]">
+          <Header />
+        </div>{" "}
+        <Scroll />
+   <div className="pt-[240px]">
+   <Routes>
           <Route path="/" element={<Gmt />} />
           <Route path="/okompaniya" element={<Okompaniya />} />
           <Route path="/dostafka" element={<Dostafka />} />
@@ -45,9 +50,10 @@ const App = () => {
           <Route path="/prizvoditel" element={<Prizvoditel />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/ctravleniya" element={<Ctravleniya />} />
-          <Route path="/podkluche" element={<KabinetPodkluche/>}/>
+          <Route path="/podkluche" element={<KabinetPodkluche />} />
           <Route path="/uslugi" element={<Uslugi />} />
         </Routes>
+   </div>
         <Footer />
       </BrowserRouter>
     </div>
