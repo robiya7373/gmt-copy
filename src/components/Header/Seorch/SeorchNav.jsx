@@ -33,11 +33,8 @@ const categories = [
 const Seorch = () => {
   const [showCategories, setShowCategories] = useState(false);
   const cart = useSelector((state) => state.cart.data);
-
-  // const SravList = useSelector(SelectCtravleniya);
   const SravList = useSelector(SelectCtravleniya);
-  // const CardList = useSelector(tempCart);
-  const WishList = useSelector(SelectWishList);
+   const WishList = useSelector(SelectWishList);
 
   return (
     <div className="max-w-[1440px] w-full mx-auto px-5">
