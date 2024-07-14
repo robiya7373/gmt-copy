@@ -13,7 +13,6 @@ import Labaratoriya from "./components/Detals/Labaratoriya";
 import Okompaniya from "./pages/About/Okompaniya";
 import Kontakt from "./pages/Kontakt/Kontakt";
 import Aksiya from "./pages/Aksiya/Aksiya";
-import Korzinka from "./pages/Korzinka/Korzinka";
 import CtranisaTovar from "./pages/CtranisaTovar/CtranisaTovar";
 import Cabinet from "./pages/Cabinet/Cabinet";
 import Prizvoditel from "./pages/Prizvoditel/Prizvoditel";
@@ -22,6 +21,7 @@ import Ctravleniya from "./pages/Ctravleniya/Ctravleniya";
 import KabinetPodkluche from "./pages/Katalog/KabinetPodkluche";
 import Uslugi from "./pages/Oplata/Uslugi";
 import Scroll from "./home/Scroll";
+import Korzinka from "./pages/Korzinka/Korzinka";
 
 const App = () => {
   return (
@@ -39,7 +39,7 @@ const App = () => {
           <Route path="/oplata" element={<Oplata />} />
           <Route path="/garantiya" element={<Garantiya />} />
           <Route path="/favorite" element={<Favorite />} />
-          <Route path="/korzinka" element={<Korzinka />} />
+          <Route path="/korzinka" element={<Korzinka/>} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/katalog" element={<Katalog />} />
           <Route path="/labaratoriya" element={<Labaratoriya />} />

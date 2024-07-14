@@ -30,7 +30,6 @@ const Korzinka = () => {
   const handleRemoveItem = (itemId) => {
     dispatch(removeItem({ id: itemId }));
   };
-  const likeList = useSelector(SelectCtravleniya);
 
   const handleStravListToggle = (product) => {
     dispatch(setToCtravleniya(product));

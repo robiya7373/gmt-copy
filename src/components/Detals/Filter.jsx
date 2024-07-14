@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Checkbox,
@@ -10,10 +10,10 @@ import {
   AccordionSummary,
   AccordionDetails,
   Typography,
-} from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const FilterSidebar = () => {
+const FilterSidebar = ({ onFilterChange }) => {
   const [priceRange, setPriceRange] = useState([20000, 950000]);
   const [selectedCountries, setSelectedCountries] = useState({
     Australia: false,
@@ -29,6 +29,10 @@ const FilterSidebar = () => {
     new: true,
     demo: false,
   });
+
+  // useEffect(() => {
+  //   onFilterChange({ priceRange, selectedCountries, condition });
+  // }, [priceRange, selectedCountries, condition]);
 
   const handlePriceChange = (event, newValue) => {
     setPriceRange(newValue);
@@ -51,18 +55,25 @@ const FilterSidebar = () => {
   return (
     <Box sx={{ width: 250, padding: 2 }}>
       <Accordion defaultExpanded>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ color: '#088269' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          sx={{ color: "#088269" }}
+        >
           <Typography>Фильтр по товарам</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Accordion defaultExpanded>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ color: '#088269' }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              sx={{ color: "#088269" }}
+            >
               <Typography>Цена</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Box>
                 <Typography>
-                  От: {priceRange[0].toLocaleString()} До: {priceRange[1].toLocaleString()}
+                  От: {priceRange[0].toLocaleString()} До:{" "}
+                  {priceRange[1].toLocaleString()}
                 </Typography>
                 <Slider
                   value={priceRange}
@@ -71,7 +82,7 @@ const FilterSidebar = () => {
                   onChange={handlePriceChange}
                   valueLabelDisplay="auto"
                   sx={{
-                    color: '#088269',
+                    color: "#088269",
                   }}
                 />
               </Box>
@@ -79,7 +90,10 @@ const FilterSidebar = () => {
           </Accordion>
 
           <Accordion defaultExpanded>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ color: '#088269' }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              sx={{ color: "#088269" }}
+            >
               <Typography>Страна</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -89,19 +103,19 @@ const FilterSidebar = () => {
                 fullWidth
                 margin="dense"
                 sx={{
-                  '& .MuiOutlinedInput-root': {
-                    '& fieldset': {
-                      borderColor: '#088269',
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "#088269",
                     },
-                    '&:hover fieldset': {
-                      borderColor: '#088269',
+                    "&:hover fieldset": {
+                      borderColor: "#088269",
                     },
-                    '&.Mui-focused fieldset': {
-                      borderColor: '#088269',
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#088269",
                     },
                   },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#088269',
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#088269",
                   },
                 }}
               />
@@ -115,9 +129,9 @@ const FilterSidebar = () => {
                         onChange={handleCountryChange}
                         name={country}
                         sx={{
-                          color: '#088269',
-                          '&.Mui-checked': {
-                            color: '#088269',
+                          color: "#088269",
+                          "&.Mui-checked": {
+                            color: "#088269",
                           },
                         }}
                       />
@@ -130,7 +144,10 @@ const FilterSidebar = () => {
           </Accordion>
 
           <Accordion defaultExpanded>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ color: '#088269' }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              sx={{ color: "#088269" }}
+            >
               <Typography>Состояние</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -142,9 +159,9 @@ const FilterSidebar = () => {
                       onChange={handleConditionChange}
                       name="new"
                       sx={{
-                        color: '#088269',
-                        '&.Mui-checked': {
-                          color: '#088269',
+                        color: "#088269",
+                        "&.Mui-checked": {
+                          color: "#088269",
                         },
                       }}
                     />
@@ -158,9 +175,9 @@ const FilterSidebar = () => {
                       onChange={handleConditionChange}
                       name="demo"
                       sx={{
-                        color: '#088269',
-                        '&.Mui-checked': {
-                          color: '#088269',
+                        color: "#088269",
+                        "&.Mui-checked": {
+                          color: "#088269",
                         },
                       }}
                     />
@@ -172,7 +189,10 @@ const FilterSidebar = () => {
           </Accordion>
 
           <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ color: '#088269' }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              sx={{ color: "#088269" }}
+            >
               <Typography>Бренд</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -181,7 +201,10 @@ const FilterSidebar = () => {
           </Accordion>
 
           <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ color: '#088269' }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              sx={{ color: "#088269" }}
+            >
               <Typography>Назначение</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -190,7 +213,10 @@ const FilterSidebar = () => {
           </Accordion>
 
           <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} sx={{ color: '#088269' }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              sx={{ color: "#088269" }}
+            >
               <Typography>Комплектация</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -204,5 +230,3 @@ const FilterSidebar = () => {
 };
 
 export default FilterSidebar;
-
-
